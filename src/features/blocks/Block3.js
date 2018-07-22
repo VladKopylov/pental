@@ -12,7 +12,6 @@ const BigImage = styled.div`
   background-position: 20% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-
   height: 100%;
   width: 80%;
   max-width: 900px;
