@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import {Layout, View} from '../../ui/atoms';
+import { View, Layout, Space, Text, Heading  } from "../../ui/atoms";
 
 const SectionA = styled.div`
   height: 100vh;
@@ -15,26 +15,6 @@ const SectionB = styled.div`
   height: 100vh;
   width: 41.66666667%;
   padding: 0;
-`;
-
-const Heading = styled.p`
-  font-size: 41px;
-  line-height: 54px;
-  letter-spacing: -0.01em;
-  color: #525557;
-  font-weight: 300;
-  font-family: Nova, sans-serif;
-`;
-
-const Text = styled.p`
-  margin-bottom: 160px;
-  margin-top: 30px;
-  margin-right: 62px;
-  font-family: Nova, sans-serif;
-  color: rgba(39, 42, 45, 0.5);
-  font-size: 19px;
-  margin-left: 20px;
-  line-height: 27px;
 `;
 
 const SpecialLink = styled(Link)`
@@ -75,7 +55,7 @@ const BigImage = styled.div`
   display: block;
 `;
 
-const Block1 = () => {
+export const Block1 = () => {
   return (
     <View>
       <SectionA>
@@ -83,12 +63,18 @@ const Block1 = () => {
       </SectionA>
       <SectionB>
         <Layout justify="center" align="center" margin="0 40px 0 0" maxWidth={400}>
-          <Heading>
+          <Heading
+          color="#525557"
+          letterSpacing={-0.01}
+          size={41}
+          lineHeight={54}>
             This is Petal.<br /> A simple, no-fee<br /> credit card.
           </Heading>
-          <Text>
+          <Space margin="30px 62px 160px 20px">
+          <Text size={19} lineHeight={27} color="rgba(39, 42, 45, 0.5)">
             High credit limits, great rates,<br /> no credit score required.
           </Text>
+          </Space>
           <SpecialLink to="#">Get early access</SpecialLink>
         </Layout>
       </SectionB>
@@ -96,4 +82,4 @@ const Block1 = () => {
   );
 };
 
-export default Block1;
+

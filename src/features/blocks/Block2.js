@@ -1,12 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Layout} from '../../ui/atoms';
-
-const View = styled.div`
-  height: auto;
-  display: flex;
-  position: relative;
-`;
+import { View, Layout, Space, Text, Heading } from '../../ui/atoms';
 
 const SectionA = styled.div`
   height: 100vh;
@@ -37,25 +31,6 @@ const SectionB = styled.div`
   padding: 0;
 `;
 
-const Heading = styled.p`
-  font-size: 31px;
-  line-height: 54px;
-  margin-top: 50px;
-  letter-spacing: -0.01em;
-  color: #525557;
-  font-weight: 300;
-  font-family: Nova, sans-serif;
-`;
-const Text = styled.p`
-  margin-bottom: 60px;
-  margin-top: 30px;
-  margin-right: 20px;
-  font-family: Nova, sans-serif;
-  color: rgba(39, 42, 45, 0.5);
-  font-size: 22px;
-  line-height: 35px;
-`;
-
 export const Block2 = () => (
   <View>
     <SectionA>
@@ -64,14 +39,30 @@ export const Block2 = () => (
       </BlockImage>
     </SectionA>
     <SectionB>
-      <Layout justify="center" align="center" margin="0 40px 0 0" maxWidth={400}>
-        <Heading>Get credit, without a credit score.</Heading>
-        <Text>
-          Petal is not like other cards. We look at the money you make and the
-          bills you already pay to help you qualify instantly. That means you
-          can get a great credit card and start building your credit score, even
-          if Petal is your first credit card. It’s that easy.
-        </Text>
+      <Layout
+        justify="center"
+        align="center"
+        margin="0 40px 0 0"
+        maxWidth={400}
+      >
+        <Space margin="50px 0 0 0">
+          <Heading
+            color="#525557"
+            letterSpacing={-0.01}
+            size={31}
+            lineHeight={40}
+          >
+            Get credit, without a credit score.
+          </Heading>
+        </Space>
+        <Space margin="30px 20px 60px 0">
+          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+            Petal is not like other cards. We look at the money you make and the
+            bills you already pay to help you qualify instantly. That means you
+            can get a great credit card and start building your credit score,
+            even if Petal is your first credit card. It’s that easy.
+          </Text>
+        </Space>
       </Layout>
     </SectionB>
   </View>

@@ -49,7 +49,7 @@ export const Block3 = () => (
         margin="0 40px 0 0"
         maxWidth={400}
       >
-        <Layout margin="50px 0 0 0">
+        <Space margin="50px 0 0 0">
           <Heading
             color="#525557"
             letterSpacing={-0.01}
@@ -58,7 +58,7 @@ export const Block3 = () => (
           >
             You think in dollars, not interest rates. So do we.
           </Heading>
-        </Layout>
+        </Space>
         <Space margin="30px 20px 45px 0">
           <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
             Petal helps you track what you spend and what you can afford. Pay

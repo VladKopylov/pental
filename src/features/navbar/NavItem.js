@@ -44,6 +44,7 @@ const SpecialLink = styled(Link)`
 const View = styled.div`
   display: flex;
   align-items: center;
+
 `;
 
 const NavItem = () => {

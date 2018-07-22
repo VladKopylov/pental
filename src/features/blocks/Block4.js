@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Layout, View} from '../../ui/atoms';
+import { View, Layout, Space, Text, Heading } from '../../ui/atoms';
 
 const SectionA = styled.div`
   height: 100vh;
@@ -16,29 +16,6 @@ const SectionB = styled.div`
   padding: 100px 0 0;
 `;
 
-const Heading = styled.p`
-  font-size: 31px;
-  line-height: 54px;
-  letter-spacing: -0.01em;
-  color: #525557;
-  font-weight: 300;
-  align-self: flex-start;
-  margin-left: 20px;
-  font-family: Nova, sans-serif;
-`;
-
-const Text = styled.p`
-  margin-bottom: 60px;
-  margin-right: 62px;
-  font-family: Nova, sans-serif;
-  color: rgba(39, 42, 45, 0.5);
-  font-size: 19px;
-  margin-left: 20px;
-  line-height: 32px;
-`;
-
-
-
 const BigImage = styled.div`
   padding-top: 100px;
   padding-bottom: 100px;
@@ -52,29 +29,67 @@ const BigImage = styled.div`
 `;
 
 export const Block4 = () => (
-    <View>
-        <SectionA>
-            <BigImage src="/assets/img/flower.jpg"/>
-        </SectionA>
-        <SectionB>
-            <Layout justify="center" align="center" margin="0 40px 0 0" maxWidth={400}>
-                <Heading>No fees, honestly.</Heading>
-                <Text>
-                    Petal is the first credit card with absolutely no fees. No overdraft
-                    fee, late fee, international fee, annual fee, or any-other-kind-of
-                    fee.
-                </Text>
-                <Heading>Easy access.</Heading>
-                <Text>
-                    Better technology means more credit and lower rates than competing
-                    intro cards. Buy more of what you need without maxing out your card.
-                </Text>
-                <Heading>Seriously simple.</Heading>
-                <Text>
-                    Set reminders, automate payments, and never miss a bill. Don’t sweat,
-                    we’ve got your back.
-                </Text>
-            </Layout>
-        </SectionB>
-    </View>
+  <View>
+    <SectionA>
+      <BigImage src="/assets/img/flower.jpg" />
+    </SectionA>
+    <SectionB>
+      <Layout
+        justify="center"
+        align="center"
+        margin="0 40px 0 0"
+        maxWidth={400}
+      >
+        <Space margin="50px 0 0 0">
+          <Heading
+            color="#525557"
+            letterSpacing={-0.01}
+            size={31}
+            lineHeight={40}
+          >
+            No fees, honestly.
+          </Heading>
+        </Space>
+        <Space margin="30px 20px 45px 0">
+          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+            Petal is the first credit card with absolutely no fees. No overdraft
+            fee, late fee, international fee, annual fee, or any-other-kind-of
+            fee.
+          </Text>
+        </Space>
+        <Space margin="50px 0 0 0">
+          <Heading
+            color="#525557"
+            letterSpacing={-0.01}
+            size={31}
+            lineHeight={40}
+          >
+            Easy access.
+          </Heading>
+        </Space>
+        <Space margin="30px 20px 45px 0">
+          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+            Better technology means more credit and lower rates than competing
+            intro cards. Buy more of what you need without maxing out your card.
+          </Text>
+        </Space>
+        <Space margin="50px 0 0 0">
+          <Heading
+            color="#525557"
+            letterSpacing={-0.01}
+            size={31}
+            lineHeight={40}
+          >
+            Seriously simple.
+          </Heading>
+        </Space>
+        <Space margin="30px 20px 45px 0">
+          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+            Set reminders, automate payments, and never miss a bill. Don’t
+            sweat, we’ve got your back.
+          </Text>
+        </Space>
+      </Layout>
+    </SectionB>
+  </View>
 );
