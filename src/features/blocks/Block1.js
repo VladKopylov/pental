@@ -53,8 +53,7 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     transform: 'translate(-50%, -50%)',
-    borderRadius: '15px',
-    
+    borderRadius: '15px'
   }
 };
 
@@ -66,17 +65,20 @@ export class Block1 extends Component {
     this.state = {
       modalIsOpen: false
     };
+    this.closeModal = this.closeModal.bind(this);
   }
 
   openModal = () => {
     this.setState({ modalIsOpen: true });
+
   };
 
-  closeModal = () => {
+  closeModal  () {
     this.setState({ modalIsOpen: false });
-  };
+  }
 
   render() {
+    console.log(this.state.modalIsOpen)
     return (
       <View>
         <SectionA>
