@@ -35,23 +35,20 @@ export const Block4 = () => (
     </SectionA>
     <SectionB>
       <Layout
-        justify="center"
-        align="center"
-        margin="0 40px 0 0"
-        maxWidth={400}
+        width={400}
       >
-        <Space margin="50px 0 0 0">
+        <Space>
           <Heading
             color="#525557"
             letterSpacing={-0.01}
-            size={31}
+            size={26}
             lineHeight={40}
           >
             No fees, honestly.
           </Heading>
         </Space>
-        <Space margin="30px 20px 45px 0">
-          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+        <Space margin="15px 20px 0 0">
+          <Text size={18} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
             Petal is the first credit card with absolutely no fees. No overdraft
             fee, late fee, international fee, annual fee, or any-other-kind-of
             fee.
@@ -61,14 +58,14 @@ export const Block4 = () => (
           <Heading
             color="#525557"
             letterSpacing={-0.01}
-            size={31}
+            size={26}
             lineHeight={40}
           >
             Easy access.
           </Heading>
         </Space>
-        <Space margin="30px 20px 45px 0">
-          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+        <Space margin="15px 20px 0 0">
+          <Text size={18} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
             Better technology means more credit and lower rates than competing
             intro cards. Buy more of what you need without maxing out your card.
           </Text>
@@ -77,14 +74,14 @@ export const Block4 = () => (
           <Heading
             color="#525557"
             letterSpacing={-0.01}
-            size={31}
+            size={26}
             lineHeight={40}
           >
             Seriously simple.
           </Heading>
         </Space>
-        <Space margin="30px 20px 45px 0">
-          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+        <Space margin="15px 20px 0 0">
+          <Text size={18} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
             Set reminders, automate payments, and never miss a bill. Don’t
             sweat, we’ve got your back.
           </Text>

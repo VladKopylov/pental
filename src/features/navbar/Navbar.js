@@ -34,7 +34,7 @@ class Navbar extends Component {
   }
 
   onScroll = () => {
-    if (window.scrollY > 500) {
+    if (window.scrollY > 480) {
       this.setState(prevState => ({
         style: {
           ...prevState.style,
@@ -43,7 +43,7 @@ class Navbar extends Component {
           transform: 'translateX(0px) translateY(0px) translateZ(0px)'
         }
       }));
-    } else if (window.scrollY < 500) {
+    } else if (window.scrollY < 480) {
       this.setState(prevState => ({
         style: {
           ...prevState.style,

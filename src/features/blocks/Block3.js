@@ -46,8 +46,7 @@ export const Block3 = () => (
       <Layout
         justify="center"
         align="center"
-        margin="0 40px 0 0"
-        maxWidth={400}
+        width={400}
       >
         <Space margin="50px 0 0 0">
           <Heading
@@ -60,14 +59,14 @@ export const Block3 = () => (
           </Heading>
         </Space>
         <Space margin="30px 20px 45px 0">
-          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+          <Text size={18} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
             Petal helps you track what you spend and what you can afford. Pay
             your full bill each month straight from your bank account and never
             pay a dime in interest.
           </Text>
         </Space>
         <Space margin="30px 20px 45px 0">
-          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+          <Text size={18} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
             Prefer to pay over time? Petal tells you exactly what it will cost
             in dollars, so you can make the payment that’s right for you.
           </Text>

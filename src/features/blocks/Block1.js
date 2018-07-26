@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { View, Layout, Space, Text, Heading  } from "../../ui/atoms";
+import Modal from 'react-modal';
+import {
+  View,
+  Layout,
+  Space,
+  Text,
+  Heading,
+  AnimatedButton
+} from '../../ui/atoms';
+import { ModalForm } from '../../ui/organisms/ModalForm';
 
 const SectionA = styled.div`
   height: 100vh;
   width: 58.33333333%;
   padding: 0;
+  border:0;
 `;
 const SectionB = styled.div`
   display: flex;
@@ -17,33 +26,6 @@ const SectionB = styled.div`
   padding: 0;
 `;
 
-const SpecialLink = styled(Link)`
-  display: flex;
-  width: 160px;
-  margin-right: 62px;
-
-  padding-right: 30px;
-  padding-left: 30px;
-  justify-content: center;
-  background-color: #67ddff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  height: 60px;
-  align-items: center;
-  transition: all 0.2s ease;
-  line-height: 24px;
-  letter-spacing: 0.01em;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  color: white;
-  font-family: Nova, sans-serif;
-  :hover {
-    background-color: #63cfee;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    transform: translate(0, -4px);
-  }
-`;
 
 const BigImage = styled.div`
   background-image: ${p => `url("${p.src}")`};
@@ -55,31 +37,92 @@ const BigImage = styled.div`
   display: block;
 `;
 
-export const Block1 = () => {
-  return (
-    <View>
-      <SectionA>
-        <BigImage src="/assets/img/balloon.jpg" />
-      </SectionA>
-      <SectionB>
-        <Layout justify="center" align="center" margin="0 40px 0 0" maxWidth={400}>
-          <Heading
-          color="#525557"
-          letterSpacing={-0.01}
-          size={41}
-          lineHeight={54}>
-            This is Petal.<br /> A simple, no-fee<br /> credit card.
-          </Heading>
-          <Space margin="30px 62px 160px 20px">
-          <Text size={19} lineHeight={27} color="rgba(39, 42, 45, 0.5)">
-            High credit limits, great rates,<br /> no credit score required.
-          </Text>
-          </Space>
-          <SpecialLink to="#">Get early access</SpecialLink>
-        </Layout>
-      </SectionB>
-    </View>
-  );
+const customStyles = {
+  overlay: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(15, 15, 15, 0.75)'
+  },
+  content: {
+    width: '500px',
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    transform: 'translate(-50%, -50%)',
+    borderRadius: '15px',
+    
+  }
 };
 
+Modal.setAppElement('#app');
 
+export class Block1 extends Component {
+  constructor() {
+    super();
+    this.state = {
+      modalIsOpen: false
+    };
+  }
+
+  openModal = () => {
+    this.setState({ modalIsOpen: true });
+  };
+
+  closeModal = () => {
+    this.setState({ modalIsOpen: false });
+  };
+
+  render() {
+    return (
+      <View>
+        <SectionA>
+          <BigImage src="/assets/img/balloon.jpg" />
+        </SectionA>
+        <SectionB>
+          <Layout
+           
+            margin="0 0 0 50px"
+            maxWidth={400}
+          >
+            <Heading
+              color="#525557"
+              letterSpacing={-0.01}
+              size={41}
+              lineHeight={54}
+            >
+              This is Petal.<br /> A simple, no-fee<br /> credit card.
+            </Heading>
+            <Space margin="30px 62px 30px 0">
+              <Text size={19} lineHeight={27} color="rgba(39, 42, 45, 0.5)">
+                High credit limits, great rates,<br /> no credit score required.
+              </Text>
+            </Space>
+            <AnimatedButton
+              background="#0bf"
+              hoverBack="#0af"
+              onClick={this.openModal}
+            >
+              Get early access
+            </AnimatedButton>
+            <Modal
+              isOpen={this.state.modalIsOpen}
+              onRequestClose={this.closeModal}
+              style={customStyles}
+              contentLabel="Example Modal"
+            >
+              
+                <ModalForm closeModal={this.closeModal}/>
+      
+            </Modal>
+
+          </Layout>
+
+        </SectionB>
+      </View>
+    );
+  }
+}

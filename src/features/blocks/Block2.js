@@ -42,8 +42,7 @@ export const Block2 = () => (
       <Layout
         justify="center"
         align="center"
-        margin="0 40px 0 0"
-        maxWidth={400}
+        width={400}
       >
         <Space margin="50px 0 0 0">
           <Heading
@@ -56,7 +55,7 @@ export const Block2 = () => (
           </Heading>
         </Space>
         <Space margin="30px 20px 60px 0">
-          <Text size={22} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
+          <Text size={18} lineHeight={35} color="rgba(39, 42, 45, 0.5)">
             Petal is not like other cards. We look at the money you make and the
             bills you already pay to help you qualify instantly. That means you
             can get a great credit card and start building your credit score,

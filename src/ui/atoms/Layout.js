@@ -9,9 +9,9 @@ export const Layout = styled.div`
   justify-content: ${p => p.justify};
   align-items: ${p => p.align};
   ${p =>
-    p.maxWidth &&
+    p.width &&
     css`
-      max-width: ${p.maxWidth}px;
+      width: ${p.width}px;
     `};
 `;
 
@@ -34,12 +34,13 @@ Layout.propTypes = {
     "unset",
     "baseline"
   ]),
-  maxWidth: PropTypes.number
+  width: PropTypes.number
 };
 
 Layout.defaultProps = {
   padding: 0,
   justify: undefined,
   align: undefined,
-  flow: "column"
+  flow: "column",
+  margin: "0px"
 };
