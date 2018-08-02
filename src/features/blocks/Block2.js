@@ -1,11 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import { View, Layout, Space, Text, Heading } from '../../ui/atoms';
+import { View, Layout, Space, Text, Heading, Image } from '../../ui/atoms';
 
 const SectionA = styled.div`
   height: 100vh;
   width: 58.33333333%;
   padding: 0;
+`;
+
+const Arrow = styled.a`
+  opacity: 0.2;
+  :hover {
+    opacity: 0.3;
+  }
 `;
 const BigImage = styled.div`
   background-image: ${p => `url("${p.src}")`};
@@ -39,11 +46,7 @@ export const Block2 = () => (
       </BlockImage>
     </SectionA>
     <SectionB>
-      <Layout
-        justify="center"
-        align="center"
-        width={400}
-      >
+      <Layout justify="center" align="center" width={400}>
         <Space margin="50px 0 0 0">
           <Heading
             color="#525557"
@@ -62,6 +65,9 @@ export const Block2 = () => (
             even if Petal is your first credit card. It’s that easy.
           </Text>
         </Space>
+        <Arrow href="#section2">
+          <Image src="/assets/img/arrow.png" width={50} />
+        </Arrow>
       </Layout>
     </SectionB>
   </View>

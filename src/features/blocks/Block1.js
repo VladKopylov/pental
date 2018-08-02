@@ -7,7 +7,7 @@ import {
   Space,
   Text,
   Heading,
-  AnimatedButton
+  AnimatedButton, Image
 } from '../../ui/atoms';
 import { ModalForm } from '../../ui/organisms/ModalForm';
 
@@ -16,6 +16,12 @@ const SectionA = styled.div`
   width: 58.33333333%;
   padding: 0;
   border:0;
+`;
+const Arrow = styled.a`
+  opacity: 0.2;
+  :hover {
+    opacity: 0.3;
+  }
 `;
 const SectionB = styled.div`
   display: flex;
@@ -73,12 +79,11 @@ export class Block1 extends Component {
 
   };
 
-  closeModal  () {
+  closeModal = ()=> {
     this.setState({ modalIsOpen: false });
   }
 
   render() {
-    console.log(this.state.modalIsOpen)
     return (
       <View>
         <SectionA>
@@ -98,7 +103,7 @@ export class Block1 extends Component {
             >
               This is Petal.<br /> A simple, no-fee<br /> credit card.
             </Heading>
-            <Space margin="30px 62px 30px 0">
+            <Space margin="30px 43px 30px 0">
               <Text size={19} lineHeight={27} color="rgba(39, 42, 45, 0.5)">
                 High credit limits, great rates,<br /> no credit score required.
               </Text>
@@ -110,6 +115,7 @@ export class Block1 extends Component {
             >
               Get early access
             </AnimatedButton>
+            
             <Modal
               isOpen={this.state.modalIsOpen}
               onRequestClose={this.closeModal}
@@ -120,7 +126,9 @@ export class Block1 extends Component {
                 <ModalForm closeModal={this.closeModal}/>
       
             </Modal>
-
+            <Space margin="50px auto">
+            <Arrow href='#section1'><Image src='/assets/img/arrow.png' width={50}/></Arrow>
+            </Space>
           </Layout>
 
         </SectionB>

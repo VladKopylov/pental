@@ -7,6 +7,12 @@ const SectionA = styled.div`
   width: 58.33333333%;
   padding: 0;
 `;
+const Arrow = styled.a`
+  opacity: 0.2;
+  :hover {
+    opacity: 0.3;
+  }
+`;
 const BigImage = styled.div`
   background-image: ${p => `url("${p.src}")`};
   background-position: 20% 50%;
@@ -71,6 +77,7 @@ export const Block3 = () => (
             in dollars, so you can make the payment that’s right for you.
           </Text>
         </Space>
+        <Arrow href='#section3'><img src='/assets/img/arrow.png' width={50}/></Arrow>
       </Layout>
     </SectionB>
   </View>

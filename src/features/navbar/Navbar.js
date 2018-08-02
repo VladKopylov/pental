@@ -17,6 +17,7 @@ const View = styled.div`
   align-items: center;
 `;
 
+
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -25,9 +26,10 @@ class Navbar extends Component {
         transformStyle: 'preserve-3d',
         transition: 'opacity 500ms,transform 500ms',
         opacity: 0
-      }
+      },
     };
   }
+
 
   componentDidMount() {
     document.addEventListener('scroll', this.onScroll);
@@ -59,14 +61,15 @@ class Navbar extends Component {
 
   render() {
     return (
-      <View style={this.state.style}>
-        <Link to="/">
-          <Image src="/assets/img/logo.png" width={80} />
-        </Link>
-        <div>
-          <NavItem />
-        </div>
-      </View>
+        <View style={this.state.style}>
+          <Link to="/">
+            <Image src="/assets/img/logo.png" width={80} />
+          </Link>
+          <div>
+            <NavItem openModal={this.openModal} />
+          </div>
+          
+        </View>
     );
   }
 }

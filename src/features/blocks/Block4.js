@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import { View, Layout, Space, Text, Heading } from '../../ui/atoms';
+import { View, Layout, Space, Text, Heading, Image } from '../../ui/atoms';
 
 const SectionA = styled.div`
   height: 100vh;
   width: 58.33333333%;
   padding: 0;
+`;
+const Arrow = styled.a`
+  opacity: 0.2;
+  :hover {
+    opacity: 0.3;
+  }
 `;
 const SectionB = styled.div`
   display: flex;
@@ -85,6 +91,11 @@ export const Block4 = () => (
             Set reminders, automate payments, and never miss a bill. Don’t
             sweat, we’ve got your back.
           </Text>
+        </Space>
+        <Space margin="50px auto">
+        <Arrow href="#">
+          <Image src="/assets/img/arrow.png" width={50} />
+        </Arrow>
         </Space>
       </Layout>
     </SectionB>
