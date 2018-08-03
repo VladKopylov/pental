@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { View, Layout, Space, Text, Heading  } from "../../ui/atoms";
+import { View, Layout, Space, Text, Heading, Image  } from "../../ui/atoms";
 
 const SectionA = styled.div`
   height: 100vh;
@@ -77,7 +77,7 @@ export const Block3 = () => (
             in dollars, so you can make the payment that’s right for you.
           </Text>
         </Space>
-        <Arrow href='#section3'><img src='/assets/img/arrow.png' width={50}/></Arrow>
+        <Arrow href='#section3'><Image src='/assets/img/arrow.png' width={50}/></Arrow>
       </Layout>
     </SectionB>
   </View>

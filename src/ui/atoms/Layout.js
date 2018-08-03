@@ -1,8 +1,9 @@
-import styled, { css } from "styled-components";
-import PropTypes from "prop-types";
+import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 
 export const Layout = styled.div`
-  display: flex;
+  display: ${p => p.display};
+  background-color: ${p => p.background};
   flex-direction: ${p => `${p.flow}`};
   margin: ${p => `${p.margin}`};
   padding: 0;
@@ -13,34 +14,51 @@ export const Layout = styled.div`
     css`
       width: ${p.width}px;
     `};
+  ${p =>
+    p.padding &&
+    css`
+      padding: ${p.padding};
+    `};
+  ${p =>
+    p.widthPercent &&
+    css`
+      width: ${p.widthPercent}%;
+    `};
+  ${p =>
+    p.height &&
+    css`
+      height: ${p.height}px;
+    `};
 `;
 
 Layout.propTypes = {
-  flow: PropTypes.oneOf(["column", "row"]).isRequired,
+  flow: PropTypes.oneOf(['column', 'row']).isRequired,
   padding: PropTypes.number,
   margin: PropTypes.string,
+  display: PropTypes.oneOf(['block', 'flex', 'inline']),
   justify: PropTypes.oneOf([
-    "center",
-    "flex-start",
-    "flex-end",
-    "space-between",
-    "space-around"
+    'center',
+    'flex-start',
+    'flex-end',
+    'space-between',
+    'space-around'
   ]),
   align: PropTypes.oneOf([
-    "center",
-    "flex-start",
-    "flex-end",
-    "strecth",
-    "unset",
-    "baseline"
+    'center',
+    'flex-start',
+    'flex-end',
+    'strecth',
+    'unset',
+    'baseline'
   ]),
   width: PropTypes.number
 };
 
 Layout.defaultProps = {
+  display: 'flex',
   padding: 0,
   justify: undefined,
   align: undefined,
-  flow: "column",
-  margin: "0px"
+  flow: 'column',
+  margin: '0px'
 };

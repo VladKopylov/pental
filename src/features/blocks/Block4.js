@@ -19,7 +19,7 @@ const SectionB = styled.div`
   justify-content: center;
   height: 100vh;
   width: 41.66666667%;
-  padding: 100px 0 0;
+  padding: 100px 0;
 `;
 
 const BigImage = styled.div`
@@ -28,6 +28,7 @@ const BigImage = styled.div`
   background-image: ${p => `url("${p.src}")`};
   background-position: 50% 50%;
   background-size: cover;
+  padding:0 0 200px 0;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -93,7 +94,7 @@ export const Block4 = () => (
           </Text>
         </Space>
         <Space margin="50px auto">
-        <Arrow href="#">
+        <Arrow href="#section4">
           <Image src="/assets/img/arrow.png" width={50} />
         </Arrow>
         </Space>
