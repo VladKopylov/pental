@@ -10,6 +10,9 @@ export const Text = styled.p`
             line-height: ${p.lineHeight}px;
         `
     }
+      ${p=>p.textAlign && css`
+        text-align:${p.textAlign};
+    `}
 `
 
 Text.propTypes ={

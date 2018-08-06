@@ -1,6 +1,7 @@
 import React from 'react';
-import { Block1, Block2, Block3, Block4, YellowBlock } from './';
+import { Block1, Block2, Block3, Block4, YellowBlock, LastBlock,ListLinks, Footer } from './';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
+
 configureAnchors({ offset: -0, scrollDuration: 800 });
 
 export const Block = () => (
@@ -18,5 +19,8 @@ export const Block = () => (
     <ScrollableAnchor id={'section4'}>
     <YellowBlock/>
     </ScrollableAnchor>
+    <LastBlock/>
+    <ListLinks/>
+    <Footer/>
   </div>
 );

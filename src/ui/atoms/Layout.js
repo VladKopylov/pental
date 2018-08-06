@@ -33,7 +33,6 @@ export const Layout = styled.div`
 
 Layout.propTypes = {
   flow: PropTypes.oneOf(['column', 'row']).isRequired,
-  padding: PropTypes.number,
   margin: PropTypes.string,
   display: PropTypes.oneOf(['block', 'flex', 'inline']),
   justify: PropTypes.oneOf([
@@ -47,7 +46,7 @@ Layout.propTypes = {
     'center',
     'flex-start',
     'flex-end',
-    'strecth',
+    'stretch',
     'unset',
     'baseline'
   ]),
@@ -56,7 +55,6 @@ Layout.propTypes = {
 
 Layout.defaultProps = {
   display: 'flex',
-  padding: 0,
   justify: undefined,
   align: undefined,
   flow: 'column',

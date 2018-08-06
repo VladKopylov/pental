@@ -6,14 +6,17 @@ export const Heading = styled.p`
     font-size: ${p=>`${p.size}px`};
     font-family: ${p=>`${p.font}`};
 
-    ${p=>p.lineHeight & css`
+    ${p=>p.lineHeight && css`
         line-height: ${p.lineHeight}px;
     `};
-    ${p=>p.fontWeight & css`
+    ${p=>p.fontWeight && css`
         font-weight: ${p.fontWeight};
     `}
-    ${p=>p.letterSpacing & css`
+    ${p=>p.letterSpacing && css`
         letter-spacing: ${p.letterSpacing}em;
+    `}
+    ${p=>p.textAlign && css`
+        text-align:${p.textAlign}
     `}
 `
 

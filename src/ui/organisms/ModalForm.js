@@ -18,7 +18,7 @@ export const ModalForm = ({ closeModal }) => (
       <Layout flow="column" width={500} align="flex-end">
         <X onClick={() => closeModal()}>×</X>
       </Layout>
-      <Heading size={18} fontWeight="800">
+      <Heading size={18} fontWeight="400">
         Get early access to Petal
       </Heading>
       <Layout width={420}>
